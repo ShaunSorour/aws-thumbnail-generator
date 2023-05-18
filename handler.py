@@ -103,7 +103,7 @@ def s3_get_item(event, context):
             'id': event['pathParameters']['id']
         }
     )
-    item = response['item']
+    item = response['Item']
 
     return {
         'statusCode': 200,
