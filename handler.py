@@ -71,7 +71,7 @@ def upload_to_s3(bucket, key, image, img_size):
     url = '{}/{}/{}'.format(s3.meta.endpoint_url, bucket, key)
 
     # save to DB
-    s3_save_thumbnail_url_to_dynamo(url_path=url, img_size=i)
+    s3_save_thumbnail_url_to_dynamo(url, img_size)
     return url
 
 
